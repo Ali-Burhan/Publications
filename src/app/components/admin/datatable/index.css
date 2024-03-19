@@ -1,0 +1,72 @@
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+    overflow-y: hidden;
+  }
+  
+  .data-table {
+    width: 100%;
+    
+  }
+  
+  .data-table th{
+    padding: 10px;
+    text-align: left;
+  }
+.data-table td {
+    padding: 20px 15px 20px 10px;
+    text-align: left;
+  }
+  
+  .data-table th {
+    cursor: pointer;
+  }
+  
+  .data-table th.photo, .data-table th.name, .data-table th.subtitle, .data-table th.description, .data-table th.charges, .data-table th.cost {
+    position: relative;
+  }
+  
+  .data-table th.photo::after, .data-table th.name::after, .data-table th.subtitle::after, .data-table th.description::after, .data-table th.charges::after, .data-table th.cost::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+  }
+  
+  .data-table th.asc.photo::after, .data-table th.desc.photo::after {
+    border-top: 5px solid #000;
+  }
+  
+  .data-table th.asc.name::after, .data-table th.desc.name::after {
+    border-top: 5px solid #000;
+  }
+  
+  .data-table th.asc.subtitle::after, .data-table th.desc.subtitle::after {
+    border-top: 5px solid #000;
+  }
+  
+  .data-table th.asc.description::after, .data-table th.desc.description::after {
+    border-top: 5px solid #000;
+  }
+  
+  .data-table th.asc.charges::after, .data-table th.desc.charges::after {
+    border-top: 5px solid #000;
+  }
+  
+  .data-table th.asc.cost::after, .data-table th.desc.cost::after {
+    border-top: 5px solid #000;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .data-table th, .data-table td {
+      padding: 4px;
+      font-size: 12px;
+    }
+  }
+  
