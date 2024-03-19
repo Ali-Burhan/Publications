@@ -119,10 +119,12 @@ const Sidebar = ({ children }) => {
           </div>
           <hr className=" mb-5 opacity-15"/>
           {
-            sidebarlinks.map((ele,index)=>(   
+            sidebarlinks.map((ele,index)=>( 
           <Link key={index} href={ele.link}>
-          <div key={index} onClick={()=>setActiveState(index)} title={ele.disable && 'Wait For Next Version'} className={`mt-3 ${ele.disable && 'cursor-no-drop'} ${ !ele.disable && 'hover:scale-105 hover:bg-gradient-to-b from-[#42B2BC] to-[#1E5156] hover:shadow-md'} flex gap-4 group py-2 px-5 rounded-r-full cursor-pointer items-center ${activeState == index && !ele.disable? "bg-gradient-to-b from-[#42B2BC] to-[#1E5156]":""}`}>
-            <Image className=" group-hover:text-[var(--primary-color)] text-[var(--secondary-color)]" alt={index} src={ele.imgPath} height={25} width={25}/>
+          <div key={index} onClick={()=>setActiveState(index)} title={ele.disable && 'Wait For Next Version'} className={`mt-3 pr-0 ${ele.disable && 'cursor-no-drop'} ${ !ele.disable && 'hover:scale-105 hover:bg-gradient-to-b from-[#42B2BC] to-[#1E5156] hover:shadow-md'} flex gap-4 group py-2 pl-3 rounded-r-full cursor-pointer items-center ${activeState == index && !ele.disable? "bg-gradient-to-b from-[#42B2BC] to-[#1E5156]":""}`}>
+            
+            <Image  className=" group-hover:text-[var(--primary-color)]  text-[var(--secondary-color)]" alt={index} src={ele.imgPath} height={25} width={25}/>
+            
            { !toggleside &&
              <p className="group-hover:text-white text-white ">
               {ele.title}
