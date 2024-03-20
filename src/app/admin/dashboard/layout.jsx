@@ -91,6 +91,7 @@ const Sidebar = ({ children }) => {
       window.removeEventListener('scroll', handleScroll);
     };
    },[])
+   
  
   return (
     <>
@@ -100,13 +101,12 @@ const Sidebar = ({ children }) => {
       <div className={` min-h-screen fixed ${togglebanner?'top-[0px] transition-all duration-500':'top-[180px] transition-all duration-500'} left-0 bg-gradient-to-b from-[#42B2BC] to-[#1E5156] flex flex-col justify-between ${ toggleside? 'w-[73px]':'w-[200px]'} pr-5`} >
         <div className="relative">
 
-        <div title="Toggle Sidebar" className={`absolute -right-8 -rotate-90 top-[57px] cursor-pointer ${ !toggleside && 'rotate-90'}`} onClick={()=>setToggleSide(!toggleside)}>
-          
+        <div title="Toggle Sidebar" className={`absolute -right-8 -rotate-90 top-[57px] bg-white rounded-full cursor-pointer ${ !toggleside && 'rotate-90'}`} onClick={()=>setToggleSide(!toggleside)}>
           <Image
           src={'/admin/sidebaricons/sidebartoggler.svg'}
           width={30}
           height={30}
-          className=""
+          className="border-2 border-white rounded-full animate-pulse"
           />
         </div>
           <div className="flex gap-3 mb-2 h-16 items-center">

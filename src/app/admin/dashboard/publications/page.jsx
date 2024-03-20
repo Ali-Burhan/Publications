@@ -47,61 +47,62 @@ const Publications = () => {
         <div className='fixed inset-0 animate-pop flex items-center justify-center bg-gray-800 bg-opacity-50'>
             <div className='w-[900px] bg-white  rounded-xl '>
                 <div className='flex p-2 justify-between items-center rounded-t-xl bg-gradient-to-b text-white from-[var(--primary-color)] to-[var(--secondary-color)]'>
-                  <h1>Add Publication</h1>
+                  <h1 className='px-2'>Add Publication</h1>
                   <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer' onClick={()=>setInputpopup(false)}/>
                 </div>
                 <div className='py-5 px-10 flex flex-col gap-5'>
                   {/* //Flat Inputs */}
                   <div className='flex items-center'>
-                      <label htmlFor="selectfile" className='font-semibold w-[15%]'>File</label>
-                      <input type="file" className='outline-none w-full ' />
+                      <label htmlFor="selectfile" className='font-semibold text-[var(--black-color)] w-[15%]'>File</label>
+                      <input type="file" className='outline-none w-full ' title='Select Your Publish File'/>
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="Title" className='font-semibold w-[15%]'>Title</label>
-                      <input type="text" className='outline-none border p-1 w-full rounded placeholder:pl-3' placeholder='Enter Title' />
+                      <label htmlFor="Title" className='font-semibold text-[var(--black-color)] w-[15%]'>Title</label>
+                      <input type="text" className='outline-none border p-1 w-full  rounded pl-2 placeholder:text-sm' placeholder='Enter Title' />
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="bookname" className='font-semibold w-[15%]'>Book Name</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full placeholder:pl-3' placeholder='Enter Book Name' />
+                      <label htmlFor="bookname" className='font-semibold text-[var(--black-color)] w-[15%]'>Book Name</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Book Name' />
                   </div>
 
                   {/* Two inputs div */}
                 <div className='grid grid-cols-2 gap-16 mb-14'>
+
                     <div className='flex flex-col gap-5'>
                     <div className='flex items-center'>
-                      <label htmlFor="page" className='font-semibold w-[40%]'>Page No.</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full placeholder:pl-3' placeholder='Enter Page Number' />
+                      <label htmlFor="page" className='font-semibold text-[var(--black-color)] w-[40%]'>Page No.</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="Publisher" className='font-semibold w-[40%]'>Publisher</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full placeholder:pl-3' placeholder='Enter Publishers' />
+                      <label htmlFor="Publisher" className='font-semibold text-[var(--black-color)] w-[40%]'>Publisher</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="Author" className='font-semibold w-[40%]'>Author&#40;s&#41;</label>
-                      <input type="text" className='outline-none border p-1 rounded ml-5 w-full placeholder:pl-3' placeholder='Enter Author' />
-                      <button className='ml-2 py-[2px] px-3 bg-[var(--primary-color)] font-bold text-2xl text-white rounded'>+</button>
+                      <label htmlFor="Author" className='font-semibold text-[var(--black-color)] w-[40%]'>Author&#40;s&#41;</label>
+                      <input type="text" className='outline-none border p-1 rounded ml-5 w-full  pl-2 placeholder:text-sm' placeholder='Enter Author' />
+                      <button className='ml-2 py-[1px] px-[9px] bg-[var(--primary-color)] font-bold text-2xl text-white rounded hover:bg-[var(--secondary-color)] transition-all duration-300' title='You Can Add More'>+</button>
                   </div>
                     </div>
                     <div className='flex flex-col gap-5'>
 
                     <div className='flex items-center'>
-                      <label htmlFor="Edition" className='font-semibold w-[40%]'>Edition</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full placeholder:pl-3' placeholder='Enter Page Number' />
+                      <label htmlFor="Edition" className='font-semibold text-[var(--black-color)] w-[40%]'>Edition</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="Publication" className='font-semibold w-[40%]'>Year</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full placeholder:pl-3' placeholder='Enter Publishers' />
+                      <label htmlFor="Publication" className='font-semibold text-[var(--black-color)] w-[40%]'>Year</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="Editor" className='font-semibold w-[40%]'>Editor&#40;s&#41;</label>
-                      <input type="text" className='outline-none border p-1 rounded ml-5 w-full placeholder:pl-3' placeholder='Enter Author' />
-                      <button className='ml-2 py-[2px] px-3 bg-[var(--primary-color)] font-bold text-2xl text-white rounded'>+</button>
+                      <label htmlFor="Editor" className='font-semibold text-[var(--black-color)] w-[40%]'>Editor&#40;s&#41;</label>
+                      <input type="text" className='outline-none border p-1 rounded ml-5 w-full  pl-2 placeholder:text-sm' placeholder='Enter Author' />
+                      <button className='ml-2 py-[1px] px-[9px] bg-[var(--primary-color)] font-bold text-2xl text-white rounded hover:bg-[var(--secondary-color)] transition-all duration-300' title='You Can Add More'>+</button>
                   </div>
                     </div>
                 </div>
                 <hr />
                 <div className='flex justify-end'>
-                  <button className='px-6 py-2 text-white rounded-full bg-[var(--primary-color)]'>Add</button>
+                  <button className='px-6 py-2 text-white rounded-full bg-[var(--primary-color)] font-semibold hover:bg-[var(--secondary-color)] transition-all duration-300'>Add</button>
                 </div>
                 </div>
             </div>

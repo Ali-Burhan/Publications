@@ -6,6 +6,7 @@
     --primary-color: #42B2BC;
     --secondary-color: #1E5156;
     --gradient-bg:linear-gradient(to bottom, #42B2BC, #1E5156);
+    --black-color:#2F2F2F;
 }
 
 .banner{
