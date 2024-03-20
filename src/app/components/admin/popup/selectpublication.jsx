@@ -1,7 +1,12 @@
+'use client'
 import Image from "next/image"
-const Selectpubllication = ({path,label}) => {
+const Selectpubllication = ({path,label,setInputpopup,setPublicationpopup}) => {
+  const handleClick = () => {
+    setInputpopup(true)
+    setPublicationpopup(false)
+  }
   return (
-    <div className='flex flex-col gap-2 justify-center group cursor-pointer items-center'>
+    <div className='flex flex-col gap-2 justify-center group cursor-pointer items-center' onClick={handleClick}>
     <Image
    src={path}
     width={70}
