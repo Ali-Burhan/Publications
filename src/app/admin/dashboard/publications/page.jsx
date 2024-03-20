@@ -45,10 +45,10 @@ const Publications = () => {
     const popupinput =  () => {
       return(
         <div className='fixed inset-0 animate-pop flex items-center justify-center bg-gray-800 bg-opacity-50'>
-            <div className='w-[900px] bg-white  rounded-t-xl'>
-                <div className='flex p-2 justify-between rounded-t-xl bg-gradient-to-b text-white from-[var(--primary-color)] to-[var(--secondary-color)]'>
+            <div className='w-[900px] bg-white  rounded-xl '>
+                <div className='flex p-2 justify-between items-center rounded-t-xl bg-gradient-to-b text-white from-[var(--primary-color)] to-[var(--secondary-color)]'>
                   <h1>Add Publication</h1>
-                  <Image src={'/admin/Groupwhite.svg'} width={25} height={25} className='cursor-pointer' onClick={()=>setInputpopup(false)}/>
+                  <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer' onClick={()=>setInputpopup(false)}/>
                 </div>
                 <div className='py-5 px-10 flex flex-col gap-5'>
                   {/* //Flat Inputs */}
