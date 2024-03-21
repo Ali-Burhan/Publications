@@ -1,0 +1,7 @@
+.imagesetrequest{
+    background-color: aquamarine;
+    background: url('../../../../../public/admin/register.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -36,13 +36,13 @@ const Sidebar = ({ children }) => {
     {
       imgPath:'/admin/sidebaricons/Icon_Customers.svg',
       title:'Faculty',
-      link:'/admin/dashboard/Faculty',
+      link:'/admin/dashboard/faculty',
       index:3
     },
     {
       imgPath:'/admin/sidebaricons/Icon_Reference.svg',
       title:'Admins',
-      link:'/admin/dashboard/Admins',
+      link:'/admin/dashboard/admins',
       index:4
     },
     {
@@ -79,7 +79,7 @@ const Sidebar = ({ children }) => {
     const handleScroll = () => {
       // Check if user has scrolled beyond a certain threshold
       console.log(window.scrollY);
-      if (window.scrollY > 12) {
+      if (window.scrollY > 25) {
         setToggleBanner((prev)=>true);
       } 
     };
@@ -98,7 +98,7 @@ const Sidebar = ({ children }) => {
     <div className={`banner ${togglebanner?'h-[0px] transition-all duration-500':'h-[180px] transition-all duration-500'} flex items-center overflow-hidden  justify-center w-full text-white shadow-lg`}>     
     </div>
     <div className="flex">
-      <div className={` min-h-screen fixed ${togglebanner?'top-[0px] transition-all duration-500':'top-[180px] transition-all duration-500'} left-0 bg-gradient-to-b from-[#42B2BC] to-[#1E5156] flex flex-col justify-between ${ toggleside? 'w-[73px]':'w-[200px]'} pr-5`} >
+      <div className={` min-h-screen fixed ${togglebanner?'top-[0px]':'top-[180px]'} left-0 bg-gradient-to-b from-[#42B2BC] to-[#1E5156] flex flex-col justify-between ${ toggleside? 'w-[73px]':'w-[200px]'} pr-5`} >
         <div className="relative">
 
         <div title="Toggle Sidebar" className={`absolute -right-8 -rotate-90 top-[57px] bg-white rounded-full cursor-pointer ${ !toggleside && 'rotate-90'}`} onClick={()=>setToggleSide(!toggleside)}>
@@ -156,7 +156,7 @@ const Sidebar = ({ children }) => {
     src={'/admin/sidebaricons/close.svg'}
     width={100}
     height={100}
-    className=" animate-pulse"
+    className="   "
     />:
     <Image
     src={'/admin/sidebaricons/open.svg'}
@@ -261,20 +261,17 @@ const Sidebar = ({ children }) => {
                 <div className={`${ userPop?"flex":'hidden'} userpopanimate absolute left-[-150px] top-11 p-2 rounded-2xl flex-col justify-evenly w-[200px] h-[200px] bg-[var(--primary-color)] text-white border`}>
                   <div className="flex items-center gap-2 ">
                      <div>
-                      <Image src={'/user.svg'} alt="HELLO" width={25} height={25}/>
                      </div>
-                     <div className=" ">User Profile</div>
+                     <div className=" ">Profile</div>
                   </div>
                   <div className="flex items-center  gap-2">
                      <div>
-                      <Image src={'/user.svg'} alt="HELLO" width={25} height={25}/>
                      </div>
-                     <div>Company Profile</div>
+                     <div>System Info</div>
                   </div>
                   <Link href={'/admin/dashboard/help'}>
                   <div className="flex items-center  gap-2 ">
                      <div>
-                      <Image src={'/user.svg'} alt="HELLO" width={25} height={25}/>
                      </div>
                      <div>Help</div>
                   </div>

@@ -125,7 +125,7 @@ const Publications = () => {
     {/* Top bar title */}
     <div className="flex p-4 items-center justify-between">
       <div className="font-semibold text-lg">
-        Customers Lists
+        Publications  List
       </div>
       <div className="cursor-pointer" onClick={()=>setPublicationpopup(true)}>
           <Image src={'/admin/Group.png'} alt="Customer Pic" height={30} width={30}/>

@@ -14,3 +14,19 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
+/* In your CSS or stylesheets */
+@keyframes pop-up {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .animate-pop {
+    animation: pop-up 1s ease-out;
+    -webkit-animation: pop-up 0.4s ease-out;
+}
+
