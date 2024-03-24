@@ -3,10 +3,10 @@ import Image from "next/image";
 import { TiBell } from "react-icons/ti";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { useEffect, useState } from "react";
 const Sidebar = ({ children }) => {
-
+  // federal ministry logo
+  // https://www.google.com/search?sca_esv=d34a127615f5f538&sxsrf=ACQVn0_JC2Bz0jaWtmJlaocKsxRs7fDUlw:1711293074342&q=federal+ministry+of+education+pakistan&tbm=isch&source=lnms&prmd=invsbz&sa=X&ved=2ahUKEwjT1bW-l42FAxV_0QIHHYWvBqQQ0pQJegQIEBAB&biw=1600&bih=773&dpr=1#imgrc=poqvpx4S1O3C0M
   
   const [activeState,setActiveState] = useState(0)
   const [userPop, setUserPop] = useState(false)
@@ -95,9 +95,20 @@ const Sidebar = ({ children }) => {
  
   return (
     <>
-    <div className={`banner ${togglebanner?'h-[0px] transition-all duration-500':'h-[180px] transition-all duration-500'} flex items-center overflow-hidden  justify-center w-full text-white shadow-lg`}>     
+    <div className="md:hidden sm:block block h-[100vh] bg-gradient-to-b from-[var(--primary-color)] to-[var(--secondary-color)] p-10 ">
+      <div className="flex flex-col justify-between text-center h-full items-center text-3xl  text-white rounded p-5">
+        <h1 className="text-3xl text-center font-bold text-white">
+        Publication Managment System
+        </h1>
+      <Image src={'/Logo.svg'} height={120} width={120}/>
+<h1 className="border-b-2 border-red-500 border-t-2">
+Please Open this on Desktop or Laptop
+</h1>
+</div>
     </div>
-    <div className="flex">
+    <div className={`banner ${togglebanner?'h-[0px] transition-all duration-500':'h-[180px] transition-all duration-500'} items-center overflow-hidden  justify-center w-full text-white shadow-lg hidden sm:hidden md:flex`}>     
+    </div>
+    <div className=" hidden sm:hidden md:flex">
       <div className={` min-h-screen fixed ${togglebanner?'top-[0px]':'top-[180px]'} left-0 bg-gradient-to-b from-[#42B2BC] to-[#1E5156] flex flex-col justify-between ${ toggleside? 'w-[73px]':'w-[200px]'} pr-5`} >
         <div className="relative">
 

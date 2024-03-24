@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image"
-const Selectpubllication = ({path,label,setInputpopup,setPublicationpopup}) => {
+const Selectpubllication = ({path,label,setInputpopup,setPublicationpopup,tag}) => {
   const handleClick = () => {
     setInputpopup(true)
     setPublicationpopup(false)
