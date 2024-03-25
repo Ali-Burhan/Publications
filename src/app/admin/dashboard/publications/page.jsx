@@ -7,7 +7,7 @@ import './index.css'
 import Selectpubllication from '@/app/components/admin/popup/selectpublication'
 const Publications = () => {
     const [publicationpopup,setPublicationpopup] = useState(false)
-    const [inputpopup,setInputpopup] = useState(false)
+    const [inputpopup,setInputpopup] = useState("")
     //Popup of pictures
     const puplicationpop = () =>{
 
@@ -28,11 +28,11 @@ const Publications = () => {
                         </div>
                     {/* pop up content */}
                     <div className='flex justify-evenly py-6 w-full gap-5  rounded-b-xl bg-white'>
-                        <Selectpubllication setInputpopup={setInputpopup} setPublicationpopup={setPublicationpopup} path={'/admin/research.png'} label={'Research Paper'} />
-                        <Selectpubllication setInputpopup={setInputpopup} setPublicationpopup={setPublicationpopup}  path={'/admin/conference.png'} label={'Conference Paper'}/>
-                        <Selectpubllication setInputpopup={setInputpopup} setPublicationpopup={setPublicationpopup} path={'/admin/book.png'} label={'Book Chapter'}/>
-                        <Selectpubllication setInputpopup={setInputpopup} setPublicationpopup={setPublicationpopup} path={'/admin/funded.png'} label={'Funded Project'}/>
-                        <Selectpubllication setInputpopup={setInputpopup} setPublicationpopup={setPublicationpopup} path={'/admin/other.png'} label={'Other'}/>
+                        <Selectpubllication setInputpopup={setInputpopup} setPublicationpopup={setPublicationpopup} path={'/admin/research.png'} label={'Research Paper'} tag={"research"}/>
+                        <Selectpubllication setInputpopup={setInputpopup} setPublicationpopup={setPublicationpopup}  path={'/admin/conference.png'} label={'Conference Paper'} tag={"conference"}/>
+                        <Selectpubllication setInputpopup={setInputpopup} setPublicationpopup={setPublicationpopup} path={'/admin/book.png'} label={'Book Chapter'} tag={"book"}/>
+                        <Selectpubllication setInputpopup={setInputpopup} setPublicationpopup={setPublicationpopup} path={'/admin/funded.png'} label={'Funded Project'} tag={"other"}/>
+                        <Selectpubllication setInputpopup={setInputpopup} setPublicationpopup={setPublicationpopup} path={'/admin/other.png'} label={'Other'} tag={"other"}/>
                     </div>
                     <div>
                     </div>
@@ -47,7 +47,7 @@ const Publications = () => {
         <div className='fixed inset-0 animate-pop flex items-center justify-center bg-gray-800 bg-opacity-50'>
             <div className='w-[900px] bg-white  rounded-xl '>
                 <div className='flex p-2 justify-between items-center rounded-t-xl bg-gradient-to-b text-white from-[var(--primary-color)] to-[var(--secondary-color)]'>
-                  <h1 className='px-2'>Add Publication</h1>
+                  <h1 className='px-2'>Add Journal Article</h1>
                   <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer' onClick={()=>setInputpopup(false)}/>
                 </div>
                 <div className='py-5 px-10 flex flex-col gap-5'>
@@ -61,20 +61,24 @@ const Publications = () => {
                       <input type="text" className='outline-none border p-1 w-full  rounded pl-2 placeholder:text-sm' placeholder='Enter Title' />
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="bookname" className='font-semibold text-[var(--black-color)] w-[15%]'>Book Name</label>
+                      <label htmlFor="Journal" className='font-semibold text-[var(--black-color)] w-[15%]'>Journal</label>
                       <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Book Name' />
                   </div>
 
                   {/* Two inputs div */}
-                <div className='grid grid-cols-2 gap-16 mb-14'>
+                <div className='grid grid-cols-2 gap-16'>
 
                     <div className='flex flex-col gap-5'>
                     <div className='flex items-center'>
-                      <label htmlFor="page" className='font-semibold text-[var(--black-color)] w-[40%]'>Page No.</label>
+                      <label htmlFor="Volumne" className='font-semibold text-[var(--black-color)] w-[40%]'>Volumne</label>
                       <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="Publisher" className='font-semibold text-[var(--black-color)] w-[40%]'>Publisher</label>
+                      <label htmlFor="Pages" className='font-semibold text-[var(--black-color)] w-[40%]'>Pages</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="ISSN" className='font-semibold text-[var(--black-color)] w-[40%]'>ISSN</label>
                       <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
                   </div>
                   <div className='flex items-center'>
@@ -86,19 +90,23 @@ const Publications = () => {
                     <div className='flex flex-col gap-5'>
 
                     <div className='flex items-center'>
-                      <label htmlFor="Edition" className='font-semibold text-[var(--black-color)] w-[40%]'>Edition</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
+                      <label htmlFor="Year" className='font-semibold text-[var(--black-color)] w-[40%]'>Year</label>
+                      <input type="date" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="Publication" className='font-semibold text-[var(--black-color)] w-[40%]'>Year</label>
+                      <label htmlFor="Issue" className='font-semibold text-[var(--black-color)] w-[40%]'>Issue</label>
                       <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="Editor" className='font-semibold text-[var(--black-color)] w-[40%]'>Editor&#40;s&#41;</label>
-                      <input type="text" className='outline-none border p-1 rounded ml-5 w-full  pl-2 placeholder:text-sm' placeholder='Enter Author' />
-                      <button className='ml-2 py-[1px] px-[9px] bg-[var(--primary-color)] font-bold text-2xl text-white rounded hover:bg-[var(--secondary-color)] transition-all duration-300' title='You Can Add More'>+</button>
+                      <label htmlFor="Editor" className='font-semibold text-[var(--black-color)] w-[40%]'>DOI</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full pl-2 placeholder:text-sm' placeholder='Enter Author' />
                   </div>
                     </div>
+                </div>
+                {/* note input */}
+                <div className='flex items-center '>
+                      <label htmlFor="jouranalnotes" className='w-[15%] font-semibold text-[var(--black-color)]'>Notes</label>
+                      <textarea name="journalnotes" id="journalnotes" cols="30" rows="4" placeholder='Enter Input Field' className='border w-full rounded outline-none p-1 pl-2'/>
                 </div>
                 <hr />
                 <div className='flex justify-end'>
@@ -115,7 +123,7 @@ const Publications = () => {
         <div className='fixed inset-0 animate-pop flex items-center justify-center bg-gray-800 bg-opacity-50'>
             <div className='w-[900px] bg-white  rounded-xl '>
                 <div className='flex p-2 justify-between items-center rounded-t-xl bg-gradient-to-b text-white from-[var(--primary-color)] to-[var(--secondary-color)]'>
-                  <h1 className='px-2'>Add Publication</h1>
+                  <h1 className='px-2'>Add Conference Paper</h1>
                   <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer' onClick={()=>setInputpopup(false)}/>
                 </div>
                 <div className='py-5 px-10 flex flex-col gap-5'>
@@ -129,20 +137,28 @@ const Publications = () => {
                       <input type="text" className='outline-none border p-1 w-full  rounded pl-2 placeholder:text-sm' placeholder='Enter Title' />
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="bookname" className='font-semibold text-[var(--black-color)] w-[15%]'>Book Name</label>
+                      <label htmlFor="bookname" className='font-semibold text-[var(--black-color)] w-[15%]'>Conference Name</label>
                       <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Book Name' />
                   </div>
 
                   {/* Two inputs div */}
-                <div className='grid grid-cols-2 gap-16 mb-14'>
+                <div className='grid grid-cols-2 gap-16'>
 
                     <div className='flex flex-col gap-5'>
                     <div className='flex items-center'>
-                      <label htmlFor="page" className='font-semibold text-[var(--black-color)] w-[40%]'>Page No.</label>
+                      <label htmlFor="ConferenceLocation" className='font-semibold text-[var(--black-color)] w-[40%]'>Conference Location</label>
                       <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="Publisher" className='font-semibold text-[var(--black-color)] w-[40%]'>Publisher</label>
+                      <label htmlFor="Year" className='font-semibold text-[var(--black-color)] w-[40%]'>Year</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="Issue" className='font-semibold text-[var(--black-color)] w-[40%]'>Issue</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="ISSN" className='font-semibold text-[var(--black-color)] w-[40%]'>ISSN</label>
                       <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
                   </div>
                   <div className='flex items-center'>
@@ -154,11 +170,104 @@ const Publications = () => {
                     <div className='flex flex-col gap-5'>
 
                     <div className='flex items-center'>
-                      <label htmlFor="Edition" className='font-semibold text-[var(--black-color)] w-[40%]'>Edition</label>
+                      <label htmlFor="Pages" className='font-semibold text-[var(--black-color)] w-[40%]'>Pages</label>
                       <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="Publication" className='font-semibold text-[var(--black-color)] w-[40%]'>Year</label>
+                      <label htmlFor="Date" className='font-semibold text-[var(--black-color)] w-[40%]'>Date</label>
+                      <input type="date" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="Volumne" className='font-semibold text-[var(--black-color)] w-[40%]'>Volumne</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="DOI" className='font-semibold text-[var(--black-color)] w-[40%]'>DOI</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                  </div>
+                    </div>
+                </div>
+                <div className='flex items-center '>
+                      <label htmlFor="jouranalnotes" className='w-[15%] font-semibold text-[var(--black-color)]'>Notes</label>
+                      <textarea name="journalnotes" id="journalnotes" cols="30" rows="4" placeholder='Enter Input Field' className='border w-full rounded outline-none p-1 pl-2'/>
+                </div>
+                <hr />
+                <div className='flex justify-end'>
+                  <button className='px-6 py-2 text-white rounded-full bg-[var(--primary-color)] font-semibold hover:bg-[var(--secondary-color)] transition-all duration-300'>Add</button>
+                </div>
+                </div>
+            </div>
+        </div>
+      )
+    }
+    const popupinputbooksection =  () => {
+
+      return(
+        <div className='fixed inset-0 animate-pop flex items-center justify-center bg-gray-800 bg-opacity-50'>
+            <div className='w-[900px] bg-white  rounded-xl '>
+                <div className='flex p-2 justify-between items-center rounded-t-xl bg-gradient-to-b text-white from-[var(--primary-color)] to-[var(--secondary-color)]'>
+                  <h1 className='px-2'>Add Book Section</h1>
+                  <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer' onClick={()=>setInputpopup(false)}/>
+                </div>
+                <div className='py-5 px-10 flex flex-col gap-5'>
+                  {/* //Flat Inputs */}
+                  <div className='flex items-center'>
+                      <label htmlFor="selectfile" className='font-semibold text-[var(--black-color)] w-[15%]'>File</label>
+                      <input type="file" className='outline-none w-full ' title='Select Your Publish File'/>
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="Title" className='font-semibold text-[var(--black-color)] w-[15%]'>Title</label>
+                      <input type="text" className='outline-none border p-1 w-full  rounded pl-2 placeholder:text-sm' placeholder='Enter Title' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="bookname" className='font-semibold text-[var(--black-color)] w-[15%]'>Book Title</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Book Name' />
+                  </div>
+
+                  {/* Two inputs div */}
+                <div className='grid grid-cols-2 gap-16'>
+                    <div className='flex flex-col gap-5'>
+                    <div className='flex items-center'>
+                      <label htmlFor="Publishers" className='font-semibold text-[var(--black-color)] w-[40%]'>Publishers</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="Edition" className='font-semibold text-[var(--black-color)] w-[40%]'>Edition</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="Volumne" className='font-semibold text-[var(--black-color)] w-[40%]'>Volumne</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="ISSN" className='font-semibold text-[var(--black-color)] w-[40%]'>ISSN</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="Year" className='font-semibold text-[var(--black-color)] w-[40%]'>Year</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="Author" className='font-semibold text-[var(--black-color)] w-[40%]'>Author&#40;s&#41;</label>
+                      <input type="text" className='outline-none border p-1 rounded ml-5 w-full  pl-2 placeholder:text-sm' placeholder='Enter Author' />
+                      <button className='ml-2 py-[1px] px-[9px] bg-[var(--primary-color)] font-bold text-2xl text-white rounded hover:bg-[var(--secondary-color)] transition-all duration-300' title='You Can Add More'>+</button>
+                  </div>
+                    </div>
+                    <div className='flex flex-col gap-5'>
+                    <div className='flex items-center'>
+                      <label htmlFor="PublishPlace" className='font-semibold text-[var(--black-color)] w-[40%]'>Publish Place</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="Chapter" className='font-semibold text-[var(--black-color)] w-[40%]'>Chapter</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="Pages" className='font-semibold text-[var(--black-color)] w-[40%]'>Pages</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="DOI" className='font-semibold text-[var(--black-color)] w-[40%]'>DOI</label>
                       <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
                   </div>
                   <div className='flex items-center'>
@@ -167,6 +276,10 @@ const Publications = () => {
                       <button className='ml-2 py-[1px] px-[9px] bg-[var(--primary-color)] font-bold text-2xl text-white rounded hover:bg-[var(--secondary-color)] transition-all duration-300' title='You Can Add More'>+</button>
                   </div>
                     </div>
+                </div>
+                <div className='flex items-center '>
+                      <label htmlFor="jouranalnotes" className='w-[15%] font-semibold text-[var(--black-color)]'>Notes</label>
+                      <textarea name="journalnotes" id="journalnotes" cols="30" rows="4" placeholder='Enter Input Field' className='border w-full rounded outline-none p-1 pl-2'/>
                 </div>
                 <hr />
                 <div className='flex justify-end'>
@@ -183,7 +296,7 @@ const Publications = () => {
         <div className='fixed inset-0 animate-pop flex items-center justify-center bg-gray-800 bg-opacity-50'>
             <div className='w-[900px] bg-white  rounded-xl '>
                 <div className='flex p-2 justify-between items-center rounded-t-xl bg-gradient-to-b text-white from-[var(--primary-color)] to-[var(--secondary-color)]'>
-                  <h1 className='px-2'>Add Publication</h1>
+                  <h1 className='px-2'>Add</h1>
                   <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer' onClick={()=>setInputpopup(false)}/>
                 </div>
                 <div className='py-5 px-10 flex flex-col gap-5'>
@@ -196,21 +309,21 @@ const Publications = () => {
                       <label htmlFor="Title" className='font-semibold text-[var(--black-color)] w-[15%]'>Title</label>
                       <input type="text" className='outline-none border p-1 w-full  rounded pl-2 placeholder:text-sm' placeholder='Enter Title' />
                   </div>
-                  <div className='flex items-center'>
-                      <label htmlFor="bookname" className='font-semibold text-[var(--black-color)] w-[15%]'>Book Name</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Book Name' />
-                  </div>
+                  
 
                   {/* Two inputs div */}
-                <div className='grid grid-cols-2 gap-16 mb-14'>
-
+                <div className='grid grid-cols-2 gap-16'>
                     <div className='flex flex-col gap-5'>
                     <div className='flex items-center'>
-                      <label htmlFor="page" className='font-semibold text-[var(--black-color)] w-[40%]'>Page No.</label>
+                      <label htmlFor="Volumne" className='font-semibold text-[var(--black-color)] w-[40%]'>Volumne</label>
                       <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="Publisher" className='font-semibold text-[var(--black-color)] w-[40%]'>Publisher</label>
+                      <label htmlFor="Year" className='font-semibold text-[var(--black-color)] w-[40%]'>Year</label>
+                      <input type="date" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="ISSN" className='font-semibold text-[var(--black-color)] w-[40%]'>ISSN</label>
                       <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
                   </div>
                   <div className='flex items-center'>
@@ -220,13 +333,16 @@ const Publications = () => {
                   </div>
                     </div>
                     <div className='flex flex-col gap-5'>
-
                     <div className='flex items-center'>
-                      <label htmlFor="Edition" className='font-semibold text-[var(--black-color)] w-[40%]'>Edition</label>
+                      <label htmlFor="Pages" className='font-semibold text-[var(--black-color)] w-[40%]'>Pages</label>
                       <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
                   </div>
                   <div className='flex items-center'>
-                      <label htmlFor="Publication" className='font-semibold text-[var(--black-color)] w-[40%]'>Year</label>
+                      <label htmlFor="Issue" className='font-semibold text-[var(--black-color)] w-[40%]'>Issue</label>
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                  </div>
+                  <div className='flex items-center'>
+                      <label htmlFor="DOI" className='font-semibold text-[var(--black-color)] w-[40%]'>DOI</label>
                       <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
                   </div>
                   <div className='flex items-center'>
@@ -235,6 +351,10 @@ const Publications = () => {
                       <button className='ml-2 py-[1px] px-[9px] bg-[var(--primary-color)] font-bold text-2xl text-white rounded hover:bg-[var(--secondary-color)] transition-all duration-300' title='You Can Add More'>+</button>
                   </div>
                     </div>
+                </div>
+                <div className='flex items-center '>
+                      <label htmlFor="jouranalnotes" className='w-[15%] font-semibold text-[var(--black-color)]'>Notes</label>
+                      <textarea name="journalnotes" id="journalnotes" cols="30" rows="4" placeholder='Enter Input Field' className='border w-full rounded outline-none p-1 pl-2'/>
                 </div>
                 <hr />
                 <div className='flex justify-end'>
@@ -256,7 +376,10 @@ const Publications = () => {
       </div>
       <div>
         {publicationpopup && puplicationpop()}
-        {inputpopup && popupinput()}
+        {inputpopup == "research" && popupinputreseacrh()}
+        {inputpopup == "conference" && popupinputconference()}
+        {inputpopup == "book" && popupinputbooksection()}
+        {inputpopup == "other" && popupinput()}
       </div> <div className="m-5 rounded-xl shadow-sm shadow-black w-[calc(100%-40px)] overflow-hidden h-[720px]">   
     {/* Top bar title */}
     <div className="flex p-4 items-center justify-between">
