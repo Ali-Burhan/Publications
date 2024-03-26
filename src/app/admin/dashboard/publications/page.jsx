@@ -48,7 +48,7 @@ const Publications = () => {
             <div className='w-[900px] bg-white  rounded-xl '>
                 <div className='flex p-2 justify-between items-center rounded-t-xl bg-gradient-to-b text-white from-[var(--primary-color)] to-[var(--secondary-color)]'>
                   <h1 className='px-2'>Add Journal Article</h1>
-                  <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer' onClick={()=>setInputpopup(false)}/>
+                  <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer hover:scale-125 transition-all' onClick={()=>setInputpopup(false)}/>
                 </div>
                 <div className='py-5 px-10 flex flex-col gap-5'>
                   {/* //Flat Inputs */}
@@ -124,7 +124,7 @@ const Publications = () => {
             <div className='w-[900px] bg-white  rounded-xl '>
                 <div className='flex p-2 justify-between items-center rounded-t-xl bg-gradient-to-b text-white from-[var(--primary-color)] to-[var(--secondary-color)]'>
                   <h1 className='px-2'>Add Conference Paper</h1>
-                  <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer' onClick={()=>setInputpopup(false)}/>
+                  <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer hover:scale-125 transition-all' onClick={()=>setInputpopup(false)}/>
                 </div>
                 <div className='py-5 px-10 flex flex-col gap-5'>
                   {/* //Flat Inputs */}
@@ -207,7 +207,7 @@ const Publications = () => {
             <div className='w-[900px] bg-white  rounded-xl '>
                 <div className='flex p-2 justify-between items-center rounded-t-xl bg-gradient-to-b text-white from-[var(--primary-color)] to-[var(--secondary-color)]'>
                   <h1 className='px-2'>Add Book Section</h1>
-                  <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer' onClick={()=>setInputpopup(false)}/>
+                  <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer hover:scale-125 transition-all' onClick={()=>setInputpopup(false)}/>
                 </div>
                 <div className='py-5 px-10 flex flex-col gap-5'>
                   {/* //Flat Inputs */}
@@ -297,7 +297,7 @@ const Publications = () => {
             <div className='w-[900px] bg-white  rounded-xl '>
                 <div className='flex p-2 justify-between items-center rounded-t-xl bg-gradient-to-b text-white from-[var(--primary-color)] to-[var(--secondary-color)]'>
                   <h1 className='px-2'>Add</h1>
-                  <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer' onClick={()=>setInputpopup(false)}/>
+                  <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer hover:scale-125 transition-all' onClick={()=>setInputpopup(false)}/>
                 </div>
                 <div className='py-5 px-10 flex flex-col gap-5'>
                   {/* //Flat Inputs */}
@@ -387,7 +387,7 @@ const Publications = () => {
         Publications  List
       </div>
       <div className="cursor-pointer" onClick={()=>setPublicationpopup(true)}>
-          <Image src={'/admin/Group.png'} alt="Customer Pic" height={30} width={30}/>
+          <Image src={'/admin/Group.png'} alt="Customer Pic" className='hover:scale-110 transition-all' height={30} width={30}/>
       </div>
       </div> 
       {/* End Top bar */}

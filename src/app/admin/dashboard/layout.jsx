@@ -4,10 +4,17 @@ import { TiBell } from "react-icons/ti";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+
 const Sidebar = ({ children }) => {
-  // federal ministry logo
-  // https://www.google.com/search?sca_esv=d34a127615f5f538&sxsrf=ACQVn0_JC2Bz0jaWtmJlaocKsxRs7fDUlw:1711293074342&q=federal+ministry+of+education+pakistan&tbm=isch&source=lnms&prmd=invsbz&sa=X&ved=2ahUKEwjT1bW-l42FAxV_0QIHHYWvBqQQ0pQJegQIEBAB&biw=1600&bih=773&dpr=1#imgrc=poqvpx4S1O3C0M
-  
+  const {push} = useRouter()
+    const removeCookie = (name) => {
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+      push('/admin/auth/login')
+      window.location.reload()
+    };
+
+
   const [activeState,setActiveState] = useState(0)
   const [userPop, setUserPop] = useState(false)
   const [togglebanner,setToggleBanner] = useState(false)
@@ -92,7 +99,6 @@ const Sidebar = ({ children }) => {
     };
    },[])
    
- 
   return (
     <>
     <div className="md:hidden sm:block block h-[100vh] bg-gradient-to-b from-[var(--primary-color)] to-[var(--secondary-color)] p-10 ">
@@ -107,8 +113,10 @@ Please Open this on Desktop or Laptop
 </div>
     </div>
     <div className={`banner ${togglebanner?'h-[0px] transition-all duration-500':'h-[180px] transition-all duration-500'} items-center overflow-hidden  justify-center w-full text-white shadow-lg hidden sm:hidden md:flex`}>     
+
     </div>
     <div className=" hidden sm:hidden md:flex">
+
       <div className={` min-h-screen fixed ${togglebanner?'top-[0px]':'top-[180px]'} left-0 bg-gradient-to-b from-[#42B2BC] to-[#1E5156] flex flex-col justify-between ${ toggleside? 'w-[73px]':'w-[200px]'} pr-5`} >
         <div className="relative">
 
@@ -148,16 +156,14 @@ Please Open this on Desktop or Laptop
          
         </div>
         <div className="mb-3">
-           <Link  href={'/travelagency-rho.vercel.app'} target="_blank">
           <div  className={`mt-3 px-5 flex gap-4 hover:scale-105 border-[#1E5156]  hover:bg-gradient-to-b from-[#42B2BC] to-[#1E5156]  group py-2 rounded-r-full cursor-pointer items-center`}>
             <Image className=" group-hover:text-[var(--primary-color)] text-[var(--secondary-color)]" src={'/admin/sidebaricons/Icon_Website.svg'} alt="HELLO" height={25} width={25}/>
            { !toggleside &&
-             <p className="group-hover:text-white text-white ">
+             <p className="group-hover:text-white text-white " onClick={()=>removeCookie('pmscookie')}>
               Logout
             </p>
             }
           </div>
-          </Link>
         </div>
       </div>
       <div className={`grow  relative ${ toggleside? 'ml-[73px]':'ml-[200px]'}`}>
@@ -167,7 +173,7 @@ Please Open this on Desktop or Laptop
     src={'/admin/sidebaricons/close.svg'}
     width={100}
     height={100}
-    className="   "
+    className="hover:animate-bounce "
     />:
     <Image
     src={'/admin/sidebaricons/open.svg'}
