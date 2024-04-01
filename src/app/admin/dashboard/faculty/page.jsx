@@ -9,6 +9,7 @@ const Faculty = () => {
 
     //Input Popup
     const popupinput =  () => {
+
       return(
         <div className='fixed inset-0 animate-pop flex items-center justify-center bg-gray-800 bg-opacity-50'>
             <div className='w-[900px] bg-white  rounded-xl '>
@@ -20,47 +21,49 @@ const Faculty = () => {
                   {/* Two inputs div */}
                 <div className='grid grid-cols-2 gap-16 mb-7'>
 
+
                     <div className='flex flex-col gap-5'>
+
                     <div className='flex items-center'>
                       <label htmlFor="Name" className='font-semibold text-[var(--black-color)] w-[40%]'>Name</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Name' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Grade" className='font-semibold text-[var(--black-color)] w-[40%]'>Grade</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Grade' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Departments" className='font-semibold text-[var(--black-color)] w-[40%]'>Departments</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Departments' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Contact" className='font-semibold text-[var(--black-color)] w-[40%]'>Contact</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Contact' />
                   </div>
                   <div className='flex items-center'>
 
                       <label htmlFor="nopub" className='font-semibold text-[var(--black-color)] w-[40%]'>No. of Pubs</label>
-                      <input type="number" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="number" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter No. of pubs' />
                   </div>
                     </div>
                     <div className='flex flex-col gap-5'>
 
                     <div className='flex items-center'>
-                      <label htmlFor="Edition" className='font-semibold text-[var(--black-color)] w-[40%]'>Appointmen</label>
-                      <input type="date" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
+                      <label htmlFor="Edition" className='font-semibold text-[var(--black-color)] w-[40%]'>Appointment</label>
+                      <input type="date" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Appointment' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Status" className='font-semibold text-[var(--black-color)] w-[40%]'>Status</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Status' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Designation" className='font-semibold text-[var(--black-color)] w-[40%]'>Designation</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Designation' />
                   </div>
                   <div className='flex items-center'>
 
                       <label htmlFor="Email" className='font-semibold text-[var(--black-color)] w-[40%]'>Email</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Email' />
                   </div>
                     </div>
                 </div>

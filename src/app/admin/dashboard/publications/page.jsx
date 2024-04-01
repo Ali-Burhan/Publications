@@ -61,25 +61,27 @@ const Publications = () => {
                       <input type="text" className='outline-none border p-1 w-full  rounded pl-2 placeholder:text-sm' placeholder='Enter Title' />
                   </div>
                   <div className='flex items-center'>
+
                       <label htmlFor="Journal" className='font-semibold text-[var(--black-color)] w-[15%]'>Journal</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Book Name' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Journal' />
                   </div>
 
                   {/* Two inputs div */}
                 <div className='grid grid-cols-2 gap-16'>
 
+
                     <div className='flex flex-col gap-5'>
                     <div className='flex items-center'>
                       <label htmlFor="Volumne" className='font-semibold text-[var(--black-color)] w-[40%]'>Volumne</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Volume' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Pages" className='font-semibold text-[var(--black-color)] w-[40%]'>Pages</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Pages' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="ISSN" className='font-semibold text-[var(--black-color)] w-[40%]'>ISSN</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter ISSN' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Author" className='font-semibold text-[var(--black-color)] w-[40%]'>Author&#40;s&#41;</label>
@@ -91,22 +93,22 @@ const Publications = () => {
 
                     <div className='flex items-center'>
                       <label htmlFor="Year" className='font-semibold text-[var(--black-color)] w-[40%]'>Year</label>
-                      <input type="date" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
+                      <input type="date" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Year' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Issue" className='font-semibold text-[var(--black-color)] w-[40%]'>Issue</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Issue' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Editor" className='font-semibold text-[var(--black-color)] w-[40%]'>DOI</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full pl-2 placeholder:text-sm' placeholder='Enter Author' />
+                      <input type="text" className='outline-none border p-1 rounded w-full pl-2 placeholder:text-sm' placeholder='Enter DOI' />
                   </div>
                     </div>
                 </div>
                 {/* note input */}
                 <div className='flex items-center '>
                       <label htmlFor="jouranalnotes" className='w-[15%] font-semibold text-[var(--black-color)]'>Notes</label>
-                      <textarea name="journalnotes" id="journalnotes" cols="30" rows="4" placeholder='Enter Input Field' className='border w-full rounded outline-none p-1 pl-2'/>
+                      <textarea name="journalnotes" id="journalnotes" cols="30" rows="4" placeholder='Enter Any Notes' className='border w-full rounded outline-none p-1 pl-2'/>
                 </div>
                 <hr />
                 <div className='flex justify-end'>
@@ -129,37 +131,42 @@ const Publications = () => {
                 <div className='py-5 px-10 flex flex-col gap-5'>
                   {/* //Flat Inputs */}
                   <div className='flex items-center'>
+
                       <label htmlFor="selectfile" className='font-semibold text-[var(--black-color)] w-[15%]'>File</label>
                       <input type="file" className='outline-none w-full ' title='Select Your Publish File'/>
                   </div>
                   <div className='flex items-center'>
+
                       <label htmlFor="Title" className='font-semibold text-[var(--black-color)] w-[15%]'>Title</label>
                       <input type="text" className='outline-none border p-1 w-full  rounded pl-2 placeholder:text-sm' placeholder='Enter Title' />
                   </div>
                   <div className='flex items-center'>
+
                       <label htmlFor="bookname" className='font-semibold text-[var(--black-color)] w-[15%]'>Conference Name</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Book Name' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Conference  Name' />
                   </div>
 
                   {/* Two inputs div */}
                 <div className='grid grid-cols-2 gap-16'>
 
+
                     <div className='flex flex-col gap-5'>
+
                     <div className='flex items-center'>
                       <label htmlFor="ConferenceLocation" className='font-semibold text-[var(--black-color)] w-[40%]'>Conference Location</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Conference Location' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Year" className='font-semibold text-[var(--black-color)] w-[40%]'>Year</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Year' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Issue" className='font-semibold text-[var(--black-color)] w-[40%]'>Issue</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Issue' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="ISSN" className='font-semibold text-[var(--black-color)] w-[40%]'>ISSN</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter ISSN' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Author" className='font-semibold text-[var(--black-color)] w-[40%]'>Author&#40;s&#41;</label>
@@ -171,25 +178,25 @@ const Publications = () => {
 
                     <div className='flex items-center'>
                       <label htmlFor="Pages" className='font-semibold text-[var(--black-color)] w-[40%]'>Pages</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Pages' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Date" className='font-semibold text-[var(--black-color)] w-[40%]'>Date</label>
-                      <input type="date" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="date" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Date' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Volumne" className='font-semibold text-[var(--black-color)] w-[40%]'>Volumne</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Volume' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="DOI" className='font-semibold text-[var(--black-color)] w-[40%]'>DOI</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter DOI' />
                   </div>
                     </div>
                 </div>
                 <div className='flex items-center '>
                       <label htmlFor="jouranalnotes" className='w-[15%] font-semibold text-[var(--black-color)]'>Notes</label>
-                      <textarea name="journalnotes" id="journalnotes" cols="30" rows="4" placeholder='Enter Input Field' className='border w-full rounded outline-none p-1 pl-2'/>
+                      <textarea name="journalnotes" id="journalnotes" cols="30" rows="4" placeholder='Enter Any Notes' className='border w-full rounded outline-none p-1 pl-2'/>
                 </div>
                 <hr />
                 <div className='flex justify-end'>
@@ -212,40 +219,45 @@ const Publications = () => {
                 <div className='py-5 px-10 flex flex-col gap-5'>
                   {/* //Flat Inputs */}
                   <div className='flex items-center'>
+
                       <label htmlFor="selectfile" className='font-semibold text-[var(--black-color)] w-[15%]'>File</label>
-                      <input type="file" className='outline-none w-full ' title='Select Your Publish File'/>
+                      <input type="file" className='outline-none w-full ' title='Select File'/>
                   </div>
                   <div className='flex items-center'>
+
                       <label htmlFor="Title" className='font-semibold text-[var(--black-color)] w-[15%]'>Title</label>
                       <input type="text" className='outline-none border p-1 w-full  rounded pl-2 placeholder:text-sm' placeholder='Enter Title' />
                   </div>
                   <div className='flex items-center'>
+
                       <label htmlFor="bookname" className='font-semibold text-[var(--black-color)] w-[15%]'>Book Title</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Book Name' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Book Title' />
                   </div>
 
                   {/* Two inputs div */}
                 <div className='grid grid-cols-2 gap-16'>
+
                     <div className='flex flex-col gap-5'>
+
                     <div className='flex items-center'>
                       <label htmlFor="Publishers" className='font-semibold text-[var(--black-color)] w-[40%]'>Publishers</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Edition" className='font-semibold text-[var(--black-color)] w-[40%]'>Edition</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Edition' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Volumne" className='font-semibold text-[var(--black-color)] w-[40%]'>Volumne</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Volumne' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="ISSN" className='font-semibold text-[var(--black-color)] w-[40%]'>ISSN</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter ISSN' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Year" className='font-semibold text-[var(--black-color)] w-[40%]'>Year</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Year' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Author" className='font-semibold text-[var(--black-color)] w-[40%]'>Author&#40;s&#41;</label>
@@ -254,32 +266,33 @@ const Publications = () => {
                   </div>
                     </div>
                     <div className='flex flex-col gap-5'>
+
                     <div className='flex items-center'>
                       <label htmlFor="PublishPlace" className='font-semibold text-[var(--black-color)] w-[40%]'>Publish Place</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publish Place' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Chapter" className='font-semibold text-[var(--black-color)] w-[40%]'>Chapter</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Chapter' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Pages" className='font-semibold text-[var(--black-color)] w-[40%]'>Pages</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Pages' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="DOI" className='font-semibold text-[var(--black-color)] w-[40%]'>DOI</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter DOI' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Editor" className='font-semibold text-[var(--black-color)] w-[40%]'>Editor&#40;s&#41;</label>
-                      <input type="text" className='outline-none border p-1 rounded ml-5 w-full  pl-2 placeholder:text-sm' placeholder='Enter Author' />
+                      <input type="text" className='outline-none border p-1 rounded ml-5 w-full  pl-2 placeholder:text-sm' placeholder='Enter Editor' />
                       <button className='ml-2 py-[1px] px-[9px] bg-[var(--primary-color)] font-bold text-2xl text-white rounded hover:bg-[var(--secondary-color)] transition-all duration-300' title='You Can Add More'>+</button>
                   </div>
                     </div>
                 </div>
                 <div className='flex items-center '>
                       <label htmlFor="jouranalnotes" className='w-[15%] font-semibold text-[var(--black-color)]'>Notes</label>
-                      <textarea name="journalnotes" id="journalnotes" cols="30" rows="4" placeholder='Enter Input Field' className='border w-full rounded outline-none p-1 pl-2'/>
+                      <textarea name="journalnotes" id="journalnotes" cols="30" rows="4" placeholder='Enter Any Notes' className='border w-full rounded outline-none p-1 pl-2'/>
                 </div>
                 <hr />
                 <div className='flex justify-end'>
@@ -313,18 +326,20 @@ const Publications = () => {
 
                   {/* Two inputs div */}
                 <div className='grid grid-cols-2 gap-16'>
+
                     <div className='flex flex-col gap-5'>
+
                     <div className='flex items-center'>
                       <label htmlFor="Volumne" className='font-semibold text-[var(--black-color)] w-[40%]'>Volumne</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Volumne' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Year" className='font-semibold text-[var(--black-color)] w-[40%]'>Year</label>
-                      <input type="date" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="date" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Year' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="ISSN" className='font-semibold text-[var(--black-color)] w-[40%]'>ISSN</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter ISSN' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Author" className='font-semibold text-[var(--black-color)] w-[40%]'>Author&#40;s&#41;</label>
@@ -335,27 +350,29 @@ const Publications = () => {
                     <div className='flex flex-col gap-5'>
                     <div className='flex items-center'>
                       <label htmlFor="Pages" className='font-semibold text-[var(--black-color)] w-[40%]'>Pages</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Page Number' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Pages' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Issue" className='font-semibold text-[var(--black-color)] w-[40%]'>Issue</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Issue' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="DOI" className='font-semibold text-[var(--black-color)] w-[40%]'>DOI</label>
-                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter Publishers' />
+                      <input type="text" className='outline-none border p-1 rounded w-full  pl-2 placeholder:text-sm' placeholder='Enter DOI' />
                   </div>
                   <div className='flex items-center'>
                       <label htmlFor="Editor" className='font-semibold text-[var(--black-color)] w-[40%]'>Editor&#40;s&#41;</label>
-                      <input type="text" className='outline-none border p-1 rounded ml-5 w-full  pl-2 placeholder:text-sm' placeholder='Enter Author' />
+                      <input type="text" className='outline-none border p-1 rounded ml-5 w-full  pl-2 placeholder:text-sm' placeholder='Enter Editor' />
                       <button className='ml-2 py-[1px] px-[9px] bg-[var(--primary-color)] font-bold text-2xl text-white rounded hover:bg-[var(--secondary-color)] transition-all duration-300' title='You Can Add More'>+</button>
                   </div>
                     </div>
                 </div>
                 <div className='flex items-center '>
+
                       <label htmlFor="jouranalnotes" className='w-[15%] font-semibold text-[var(--black-color)]'>Notes</label>
-                      <textarea name="journalnotes" id="journalnotes" cols="30" rows="4" placeholder='Enter Input Field' className='border w-full rounded outline-none p-1 pl-2'/>
+                      <textarea name="journalnotes" id="journalnotes" cols="30" rows="4" placeholder='Enter Any Notes' className='border w-full rounded outline-none p-1 pl-2'/>
                 </div>
+
                 <hr />
                 <div className='flex justify-end'>
                   <button className='px-6 py-2 text-white rounded-full bg-[var(--primary-color)] font-semibold hover:bg-[var(--secondary-color)] transition-all duration-300'>Add</button>

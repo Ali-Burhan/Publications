@@ -19,11 +19,11 @@ const Departments = () => {
               <div className="px-10 py-5 flex flex-col gap-5">
               <div className='flex items-center'>
                       <label htmlFor="Title" className='font-semibold text-[var(--black-color)] w-[35%]'>Dept. Name</label>
-                      <input type="text" className='outline-none border p-1 w-full  rounded pl-2 placeholder:text-sm' placeholder='Input Field' />
+                      <input type="text" className='outline-none border p-1 w-full  rounded pl-2 placeholder:text-sm' placeholder='Enter Department Name' />
                   </div>
               <div className='flex items-center'>
                       <label htmlFor="Title" className='font-semibold text-[var(--black-color)] w-[35%]'>HOD</label>
-                      <input type="text" className='outline-none border p-1 w-full  rounded pl-2 placeholder:text-sm' placeholder='Input Field' />
+                      <input type="text" className='outline-none border p-1 w-full  rounded pl-2 placeholder:text-sm' placeholder='Enter HOD Name' />
                   </div>
               </div>
                 <hr />

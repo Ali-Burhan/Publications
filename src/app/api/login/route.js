@@ -13,8 +13,7 @@ export async function POST(request) {
         if (getUser.length > 0){
             const comparePass = await bcrypt.compare(password,getUser[0].password)
             if(comparePass){
-                const token =await jwt.sign({id:getUser[0]._id},process.env.SECRET_KEY)
-                
+                const token = jwt.sign({id:getUser[0]._id},process.env.SECRET_KEY)
                 cookies().set('pmscookie', token)
                 return Response.json({message:"success",status:200})
 
