@@ -66,7 +66,8 @@ const Adminrequest = () => {
                     firstname,
                     lastname,
                     email,
-                    password
+                    password,
+                    status:false
                 })
             })
             const data =await res.json()

@@ -8,7 +8,6 @@ async function connectToDb() {
             return client
         }
         let connection =  await mongoose.connect(process.env.MONGO_URI).then((res)=>{
-            
         }).catch((err)=>console.log(err))
         client = connection;
         return client

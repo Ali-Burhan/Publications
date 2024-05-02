@@ -1,11 +1,54 @@
 'use client'
 import DataTable from "@/app/components/admin/datatable/datatable"
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const Admins = () => {
   const [popup,setPopup] = useState(false)
+  const [getadmins,setAdmins] = useState([])
+  const [loading,setLoading] = useState(false)
+  async function getAdmins(){
+    let headersList = {
+      "Accept": "*/*",
+     }
+     
+     let response = await fetch("/api/login", { 
+       method: "GET",
+       headers: headersList
+     });
+     
+     let data = await response.json();
+     console.log(data);
+     setAdmins(data.allUser)
+  }
 
+
+  useEffect(()=>{
+    getAdmins()
+  },[loading])
+
+  // delete admin function
+  async function deleteAdmin(id) {
+    setLoading(true)
+    let headersList = {
+      "Accept": "*/*",
+      "Content-Type": "application/json",
+     }
+     
+     let bodyContent = JSON.stringify({
+       id
+     });
+     
+     let response = await fetch("/api/login", { 
+       method: "DELETE",
+       body: bodyContent,
+       headers: headersList
+     });
+     
+     let data = await response.json();
+     console.log(data);
+     setLoading(false)
+  }
 
   //Department Pop up
   const popupinput =  () => {
@@ -14,7 +57,7 @@ const Admins = () => {
           <div className='w-[900px] bg-white  rounded-xl '>
               <div className='flex p-2 justify-between items-center rounded-t-xl bg-gradient-to-b text-white from-[var(--primary-color)] to-[var(--secondary-color)]'>
                 <h1 className='px-2'>Add Admin</h1>
-                <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer' onClick={()=>setPopup(false)}/>
+                <Image src={'/admin/Groupwhite.svg'} width={30} height={30} className='cursor-pointer' onClick={()=>setPopup(false)} alt="image"/>
               </div>
               <div className='py-5 px-10 flex flex-col gap-5'>
                 {/* Two inputs div */}
@@ -70,7 +113,7 @@ const Admins = () => {
   return (
     <div>
       {popup && popupinput()}
-      <div className="m-5 rounded-xl shadow-sm shadow-black w-[calc(100%-40px)] overflow-hidden h-[720px]">   
+      <div className="m-5 rounded-xl shadow-sm shadow-black w-[calc(100%-40px)] overflow-auto h-[720px]">   
     {/* Top bar title */}
     <div className="flex p-4 items-center justify-between">
       <div className="font-semibold text-lg">
@@ -88,7 +131,51 @@ const Admins = () => {
       <div></div>
       </div> 
       <div className="">
-        <DataTable/>
+      <div className="table-container">
+      <table className="data-table">
+        <thead className=' bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)]  border text-white'>
+          <tr>
+            <th>
+            {/* {
+        pages.map((ele,index) => <p key={index}>{ele}</p>)
+        } */}
+              S.#
+            </th>
+            <th>
+              First Name
+            </th>
+            <th>
+              Last Name
+            </th>
+            <th>
+              Email
+            </th>
+            <th >
+              Status
+            </th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {getadmins.map((item,ind) => (
+            <tr key={item._id} className=' cursor-pointer border'>
+              <td>{ind + 1}</td>
+              <td>{item.firstname}</td>
+              <td>{item.lastname}</td>
+              <td>{item.email}</td>
+              <td>{item.status==true?"Approved":"Not Approved"}</td>
+              <td className='flex gap-3'>
+                <Image src={'/admin/datatableicons/edit.svg'} height={28} alt={item.id} width={28}/>
+                {loading && "Deleteing"}
+                <Image src={'/admin/datatableicons/delete.svg'} height={28} alt={item.id} width={28} onClick={()=>deleteAdmin(item._id)}/>
+                <Image src={'/admin/datatableicons/view.svg'} height={28} alt={item.id} width={28}/>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+        
+      </table>
+    </div>
       </div>
       {/* end functionality */}
     </div>

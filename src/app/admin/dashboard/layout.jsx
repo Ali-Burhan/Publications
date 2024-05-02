@@ -20,6 +20,7 @@ const Sidebar = ({ children }) => {
   const [togglebanner,setToggleBanner] = useState(false)
   const [toggleside, setToggleSide] = useState(false)
   const sidebarlinks = [
+
     {
       imgPath:'/admin/sidebaricons/Icon_Dashboard.svg',
       title:'Dashboard',
@@ -59,24 +60,24 @@ const Sidebar = ({ children }) => {
       disable:true,
       index:4
     },
-    {
-      imgPath:'/admin/sidebaricons/Icon_History.svg',
-      title:'History',
-      link:'/admin/dashboard/history',
-      index:5
-    },
+    // {
+    //   imgPath:'/admin/sidebaricons/Icon_History.svg',
+    //   title:'History',
+    //   link:'/admin/dashboard/history',
+    //   index:5
+    // },
     {
       imgPath:'/admin/sidebaricons/Icon_Settings.svg',
       title:'Settings',
       link:'/admin/dashboard/settings',
       index:6
     },
-    {
-      imgPath:'/admin/sidebaricons/Icon_Help.svg',
-      title:'Help',
-      link:'/admin/dashboard/help',
-      index:7
-    },
+    // {
+    //   imgPath:'/admin/sidebaricons/Icon_Help.svg',
+    //   title:'Help',
+    //   link:'/admin/dashboard/help',
+    //   index:7
+    // },
   ]
   const [nightMode, setNightMode] = useState(false);
   const path = usePathname();

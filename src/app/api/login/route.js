@@ -13,6 +13,7 @@ export async function POST(request) {
         if (getUser.length > 0){
             const comparePass = await bcrypt.compare(password,getUser[0].password)
             if(comparePass){
+                console.log(getUser[0].status);
                 const token = jwt.sign({id:getUser[0]._id},process.env.SECRET_KEY)
                 cookies().set('pmscookie', token)
                 return Response.json({message:"success",status:200})
@@ -24,6 +25,28 @@ export async function POST(request) {
         else{
             return Response.json({message:"No User Found",status:400})
         }
+    } catch (error) {
+        
+    }
+}
+
+export async function GET() {
+    try {
+        await connectToDb()
+        const allUser = await User.find()
+        return Response.json({status:200,allUser})
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+export async function DELETE(request) {
+    const {id} = await request.json()
+    try {
+        await connectToDb()
+        const deleteUser  = await User.deleteOne({_id:id})
+        return Response.json({status:200,message:"Deleted"})
     } catch (error) {
         
     }

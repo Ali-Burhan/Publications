@@ -163,20 +163,17 @@ const DataTable = () => {
         } */}
               S.#
             </th>
-            <th>
-              Photo
+            <th onClick={() => sortArrSubtitles()}>
+              Department
             </th>
             <th onClick={() => sortArrName()}>
               Name
             </th>
-            <th onClick={() => sortArrSubtitles()}>
-              Subtitle
-            </th>
             <th onClick={() => sortArrDescription()}>
-              Description
+              Designation
             </th>
-            <th>
-              Date
+            <th >
+              Paper
             </th>
             <th onClick={() => sortArrCharges()}>
             Charges
@@ -208,12 +205,7 @@ const DataTable = () => {
           )):data.map((item) => (
             <tr key={item.id} className=' cursor-pointer border'>
               <td>{item.id}</td>
-              <td><Image
-              src={'/Ali3.jpg'}
-              width={40}
-              height={40}
-              className='rounded-full'
-              /></td>
+              
               <td>{item.name}</td>
               <td>{item.subtitle}</td>
               <td>{item.description}</td>
